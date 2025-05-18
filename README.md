@@ -1,6 +1,6 @@
 # BrainFuck
 ## Credits Due
-This interpreter was created by me, and it uses intuitive techniques to combat cirtain challanges like loops where I used loop-stacking instead of preprocessing.
+This interpreter was created by me, and it uses intuitive techniques to combat certain challenges like loops where I used loop-stacking instead of preprocessing.
 
 ## How To Use This BrainFuck Python Interpreter
 
