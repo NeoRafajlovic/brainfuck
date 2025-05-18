@@ -1,9 +1,6 @@
 import sys
 import msvcrt
 
-array = [0] * 255
-pointer = 0
-
 def run(array: list, pointer: int, cmd: str):
     count = 0
     loops = []
@@ -46,11 +43,14 @@ def run(array: list, pointer: int, cmd: str):
         count += 1
     return array, pointer
 
-try:
-    with open(sys.argv[1], "r") as file:
-        array, pointer = run(array, pointer, file.read())
-except IndexError:
-    print("This BrainFuck interpreter created by Neo Rafajlovic.\n")
-    while True:
-        prompt = input("\n> ")
-        array, pointer = run(array, pointer, prompt)
+if __name__ == "__main__":
+    array = [0] * 255
+    pointer = 0
+    try:
+        with open(sys.argv[1], "r") as file:
+            array, pointer = run(array, pointer, file.read())
+    except IndexError:
+        print("This BrainFuck interpreter created by Neo Rafajlovic.\n")
+        while True:
+            prompt = input("\n> ")
+            array, pointer = run(array, pointer, prompt)
